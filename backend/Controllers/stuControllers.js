@@ -14,6 +14,10 @@ const student=stuModels.create({
 })
 res.send({msg:"iam from backend",myData:student})
 }
+const displayData=async(req,res)=>{
+  const Data=await stuModels.find()
+  res.send(Data)
+}
 module.exports={
-    homePage,studentSave
+    homePage,studentSave,displayData
 }
