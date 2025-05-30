@@ -3,6 +3,10 @@ import Layout from "./Layout"
 import Home from "./Pages/Home"
 import Insert from "./Pages/Insert"
 import Display from "./Pages/Display"
+import Search from "./Pages/Search"
+import Contact from "./Pages/Contact"
+import Update from "./Pages/Update"
+import Edit from "./Pages/Edit"
 const App = () => {
   return (
     <>
@@ -13,6 +17,11 @@ const App = () => {
             <Route path="/home" element={<Home />} />
             <Route path="/insert" element={<Insert />} />
             <Route path="/display" element={<Display />} />
+            <Route path="/updateshowdata" element={<Update />} />
+            <Route path="/editdatashow" element={<Edit />} />
+          
+            <Route path="/search" element={<Search />} />
+            <Route path="/contact" element={<Contact />} />
           </Route>
         </Routes>
       </BrowserRouter>

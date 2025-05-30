@@ -12,7 +12,9 @@ const Header = () => {
                         <Nav.Link as={Link} to="home">Home</Nav.Link>
                         <Nav.Link as={Link} to="insert">Insert</Nav.Link>
                         <Nav.Link as={Link} to="display">dis</Nav.Link>
-                        <Nav.Link as={Link} to="">Pricing</Nav.Link>
+                        <Nav.Link as={Link} to="search">Search</Nav.Link>
+                        <Nav.Link as={Link} to="contact">Contact Us</Nav.Link>
+                        <Nav.Link as={Link} to="updateshowdata">UPDATE</Nav.Link>
                     </Nav>
                 </Container>
             </Navbar>

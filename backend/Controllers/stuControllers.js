@@ -18,6 +18,47 @@ const displayData=async(req,res)=>{
   const Data=await stuModels.find()
   res.send(Data)
 }
+const searchData=async(req,res)=>{
+const {rno}=req.query
+const Data=await stuModels.find({"rollno":rno})
+// console.log(Data)
+res.send(Data)
+}
+
+const updateShow = async (req, res) => {
+  const Data = await stuModels.find();
+  res.send(Data);
+};
+const dataDelete = async (req, res) => {
+  // console.log("Delete function called")
+  // res.send("Okkkk")
+
+  // console.log(req.query)
+
+  res.send("oooooooo");
+  const { myid } = req.query;
+  const Data = await stuModels.findByIdAndDelete(myid);
+  res.send({ msg: "data deleted", Data: Data });
+};
+const editdataShow=async(req,res)=>{
+  const {id}=req.query;
+
+  const Data= await stuModels.findById(id);
+  res.send(Data);
+}
+
+
+
+const editDataSave=async(req,res)=>{
+  const {_id, rollno,name, city, fees}=req.body;
+  const Data= await stuModels.findByIdAndUpdate(_id, {rollno,name,city,fees});
+
+  res.send({msg:"Data Successfully Updated"});
+
+}
+
+
+
 module.exports={
-    homePage,studentSave,displayData
+    homePage,studentSave,displayData,searchData,dataDelete,editdataShow,editDataSave,updateShow
 }
