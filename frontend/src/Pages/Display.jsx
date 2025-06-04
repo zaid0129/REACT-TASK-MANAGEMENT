@@ -15,10 +15,13 @@ const Display = () => {
     const ans = mydata.map((key) => {
         return (
             <tr>
+                <td>
+                <img src={key.image} height={50}/> </td>
                 <td>{key.rollno}</td>
                 <td>{key.name}</td>
                 <td>{key.city}</td>
                 <td>{key.fees}</td>
+                
             </tr>
         )
 
@@ -33,6 +36,7 @@ const Display = () => {
 <th>Name</th>
 <th>Name</th>
 <th>Name</th>
+<th>images</th>
                     </tr>
                 </thead>
                 <tbody>

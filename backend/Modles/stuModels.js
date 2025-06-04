@@ -4,7 +4,8 @@ const stuSchema=mongoose.Schema({
     rollno:Number,
     name:String,
     city:String,
-    fees:Number
+    fees:Number,
+    image:String
 
 })
 

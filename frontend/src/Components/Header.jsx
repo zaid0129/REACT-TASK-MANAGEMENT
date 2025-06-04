@@ -14,7 +14,7 @@ const Header = () => {
                         <Nav.Link as={Link} to="display">dis</Nav.Link>
                         <Nav.Link as={Link} to="search">Search</Nav.Link>
                         <Nav.Link as={Link} to="contact">Contact Us</Nav.Link>
-                        <Nav.Link as={Link} to="updateshowdata">UPDATE</Nav.Link>
+                        <Nav.Link as={Link} to="update">UPDATE</Nav.Link>
                     </Nav>
                 </Container>
             </Navbar>

@@ -5,12 +5,13 @@ const homePage=(req,res)=>{
   res.send("ok")
 }
 const studentSave=(req,res)=>{
- const{rollno,name,city,fees}=req.body 
+ const{rollno,name,city,fees,img}=req.body 
 const student=stuModels.create({
     rollno:rollno,
     name:name,
     city:city,
-    fees:fees
+    fees:fees,
+    image:img
 })
 res.send({msg:"iam from backend",myData:student})
 }
@@ -50,8 +51,8 @@ const editdataShow=async(req,res)=>{
 
 
 const editDataSave=async(req,res)=>{
-  const {_id, rollno,name, city, fees}=req.body;
-  const Data= await stuModels.findByIdAndUpdate(_id, {rollno,name,city,fees});
+  const {_id, rollno,name, city, fees,image}=req.body;
+  const Data= await stuModels.findByIdAndUpdate(_id, {rollno,name,city,fees,image});
 
   res.send({msg:"Data Successfully Updated"});
 
@@ -62,3 +63,4 @@ const editDataSave=async(req,res)=>{
 module.exports={
     homePage,studentSave,displayData,searchData,dataDelete,editdataShow,editDataSave,updateShow
 }
+// multer=>relationships=>task manager

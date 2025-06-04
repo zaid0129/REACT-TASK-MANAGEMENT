@@ -8,7 +8,7 @@ const Update = () => {
      const navigate=useNavigate()
   const [mydata, setMyData] = useState([]);
   const loadData = async () => {
-    let api = `${BackEndUrl}updateshowdata`;
+    let api = `${BackEndUrl}update`;
     const response = await axios.get(api);
     console.log(response.data);
     setMyData(response.data);
@@ -26,13 +26,14 @@ const Update = () => {
   }, []);
 
   const recEdit=async(id)=>{
-    navigate(`/editdatashow/${id}`)
+    navigate(`/edit/${id}`)
   }
 
   const ans = mydata.map((key) => {
     return (
       <>
         <tr>
+          <td><img src={key.image} height={50} /></td>
           <td>{key.rollno}</td>
           <td>{key.city}</td>
           <td>{key.name}</td>
@@ -60,6 +61,7 @@ const Update = () => {
       <Table striped bordered hover size="sm">
         <thead>
           <tr>
+            <th>Image</th>
             <th>#</th>
             <th>Rollno</th>
             <th>Name</th>
