@@ -14,9 +14,9 @@ const Display = () => {
     }, [])
     const ans = mydata.map((key) => {
         return (
-            <tr>
+            <tr key={key._id}>
                 <td>
-                <img src={key.image} height={50}/> </td>
+                <img src={key.image} height={90} width={100}/> </td>
                 <td>{key.rollno}</td>
                 <td>{key.name}</td>
                 <td>{key.city}</td>
@@ -32,11 +32,11 @@ const Display = () => {
             <Table>
                 <thead>
                     <tr>
+<th>Image</th>
+<th>Roll No.</th>
 <th>Name</th>
-<th>Name</th>
-<th>Name</th>
-<th>Name</th>
-<th>images</th>
+<th>City</th>
+<th>Fees</th>
                     </tr>
                 </thead>
                 <tbody>

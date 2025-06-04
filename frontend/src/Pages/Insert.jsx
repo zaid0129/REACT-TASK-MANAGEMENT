@@ -1,6 +1,6 @@
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
-import { Children, useState } from 'react';
+import { useState } from 'react';
 import axios from "axios"
 import BackendUrl from "../Config/BackendUrl"
 
@@ -28,7 +28,8 @@ const Insert = () => {
         // console.log(response)
         let api=`${BackendUrl}save`
         console.log(response.data.url)
-        const response1=await axios.post(api,{...input,img:response.data.url})
+        const response1=await axios.post(api,{...input,image:response.data.url})
+        console.log(response1)
     }
  return (
         <>

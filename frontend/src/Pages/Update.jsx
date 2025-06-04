@@ -33,24 +33,17 @@ const Update = () => {
     return (
       <>
         <tr>
-          <td><img src={key.image} height={50} /></td>
+          <td><img src={key.image} height={90} width={100} /></td>
           <td>{key.rollno}</td>
+           <td>{key.name}</td>
           <td>{key.city}</td>
-          <td>{key.name}</td>
-          <td>{key.fees}</td>
-          <td>
-            <a
-              href="#"
-              onClick={() => {
-                recDel(key._id);
-              }}
-            >
-              Delete
-            </a>
-          </td>
-          <td>
+         <td>{key.fees}</td>
+         <td>
             <a href="#" onClick={()=>{recEdit(key._id)}}>Edit</a>
           </td>
+          <td>
+            <a href="#" onClick={()=>{recDel(key._id)}}>Delete</a>
+           </td>
         </tr>
       </>
     );
@@ -62,13 +55,12 @@ const Update = () => {
         <thead>
           <tr>
             <th>Image</th>
-            <th>#</th>
             <th>Rollno</th>
             <th>Name</th>
             <th>City</th>
             <th>Fees</th>
-            <th></th>
-            <th></th>
+           <th>Modify</th>
+           <th>Trash</th>
           </tr>
         </thead>
         <tbody>{ans}</tbody>

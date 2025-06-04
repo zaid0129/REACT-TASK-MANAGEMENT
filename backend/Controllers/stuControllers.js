@@ -5,13 +5,13 @@ const homePage=(req,res)=>{
   res.send("ok")
 }
 const studentSave=(req,res)=>{
- const{rollno,name,city,fees,img}=req.body 
+ const{rollno,name,city,fees,image}=req.body 
 const student=stuModels.create({
     rollno:rollno,
     name:name,
     city:city,
     fees:fees,
-    image:img
+    image:image
 })
 res.send({msg:"iam from backend",myData:student})
 }

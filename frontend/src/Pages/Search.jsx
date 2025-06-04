@@ -17,6 +17,7 @@ const Search = () => {
                 <h1>name: {key.name}</h1>
                 <h1>city: {key.city}</h1>
                 <h1>fees: {key.fees}</h1>
+                <img src={key.image} height={90} width={100}/>
             </>
         )
     })

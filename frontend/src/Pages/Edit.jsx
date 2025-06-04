@@ -1,8 +1,6 @@
 import {useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
-
 import BackendUrl from "../Config/BackendUrl";
-
 import axios from "axios";
 
 
@@ -10,7 +8,7 @@ const Edit=()=>{
 
     const {id}= useParams();
     const [mydata, setMyData]= useState({});
-      const [uploadimg, setUploadimg] = useState("")
+      const [uploadimg, setUploadimg] = useState(null)
       
 
     const loadData=async()=>{
@@ -50,15 +48,21 @@ const Edit=()=>{
     // }
      const handleSubmit = async (e) => {
         e.preventDefault()
-        const formData = new FormData()
+        let imageUrl=mydata.image
+        if(uploadimg){
+  const formData = new FormData()
         formData.append('file', uploadimg)
         formData.append('upload_preset', 'rajeshSir')
         formData.append('cloud_name', 'dlmqodsiq')
-        const response = await axios.put("https://api.cloudinary.com/v1_1/dlmqodsiq/image/upload",formData)
+        const response = await axios.post("https://api.cloudinary.com/v1_1/dlmqodsiq/image/upload",formData)
         // console.log(response)
+        imageUrl=response.data.url
+        }
+        
+      
         let api=`${BackendUrl}editdatasave`
-        console.log(response.data.url)
-        const response1=await axios.put(api,{...mydata,img:response.data.url})
+        const response1=await axios.put(api,{...mydata,image:imageUrl})   
+        console.log(response1.data) 
     }
 
 
@@ -75,7 +79,7 @@ const Edit=()=>{
         <br />
         Edit Fees <input type="text" name="fees" value={mydata.fees} onChange={handleInput}/>
         <br />
-        Edit Img <input type="file"   onChange={handleImg}/>
+        Edit Img <img src={mydata.image} height={70} width={100}/><input type="file"   onChange={handleImg}/>
         <button onClick={handleSubmit}>Edit save</button>
         
         </>
