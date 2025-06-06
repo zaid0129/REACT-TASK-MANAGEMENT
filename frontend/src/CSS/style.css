@@ -2,6 +2,9 @@ body{
     background-color: #001F3F !important;
 }
 .header{
+    display:flex;
+    padding: 15px 50px 0px 20px;
+    justify-content: space-between;
     height: 70px !important;
     background-color: #7ED7C1 !important;
     border-bottom-left-radius:20px ;
@@ -9,6 +12,18 @@ body{
 }
 .header h3{
     text-align: center;
-    padding-top: 15px;
+    
     color: #001F3F !important;
+}
+#usrIcn{
+  width: 30px;
+  height: 30px;
+
+}
+.formCover{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ 
 }
