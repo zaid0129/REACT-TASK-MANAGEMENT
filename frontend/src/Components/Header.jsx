@@ -2,7 +2,7 @@ const Header = () => {
     return (
         <>
         <div className="header">
-        <h1>Task Management System</h1>
+        <h3>Task Management System</h3>
         </div>
         </>
     )

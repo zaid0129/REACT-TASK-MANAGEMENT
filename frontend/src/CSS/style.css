@@ -1,3 +1,14 @@
 body{
-    background-color: black;
+    background-color: #001F3F !important;
+}
+.header{
+    height: 70px !important;
+    background-color: #7ED7C1 !important;
+    border-bottom-left-radius:20px ;
+    border-bottom-right-radius:20px ;
+}
+.header h3{
+    text-align: center;
+    padding-top: 15px;
+    color: #001F3F !important;
 }
