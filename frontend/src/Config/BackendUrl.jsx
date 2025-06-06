@@ -1,4 +1,2 @@
-
-
-const BackendUrl="http://localhost:8000/students/"
+const BackendUrl="http://localhost:8000/"
 export default BackendUrl
