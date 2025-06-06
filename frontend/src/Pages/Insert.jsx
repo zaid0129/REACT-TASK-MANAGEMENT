@@ -18,20 +18,33 @@ const Insert = () => {
         setUploadimg(e.target.files[0])
         console.log(uploadimg)
     }
+    // const handleSubmit = async (e) => {
+    //     e.preventDefault()
+    //     const formData = new FormData()
+    //     formData.append('file', uploadimg)
+    //     formData.append('upload_preset', 'rajeshSir')
+    //     formData.append('cloud_name', 'dlmqodsiq')
+    //     const response = await axios.post("https://api.cloudinary.com/v1_1/dlmqodsiq/image/upload",formData)
+    //     // console.log(response)
+    //     let api=`${BackendUrl}save`
+    //     console.log(response.data.url)
+    //     const response1=await axios.post(api,{...input,image:response.data.url})
+    //     console.log(response1)
+    // }
+
     const handleSubmit = async (e) => {
         e.preventDefault()
+        let api = `${BackendUrl}save`
         const formData = new FormData()
-        formData.append('file', uploadimg)
-        formData.append('upload_preset', 'rajeshSir')
-        formData.append('cloud_name', 'dlmqodsiq')
-        const response = await axios.post("https://api.cloudinary.com/v1_1/dlmqodsiq/image/upload",formData)
-        // console.log(response)
-        let api=`${BackendUrl}save`
-        console.log(response.data.url)
-        const response1=await axios.post(api,{...input,image:response.data.url})
-        console.log(response1)
+        formData.append('rollno', input.rollno)
+        formData.append('name', input.name)
+        formData.append('city', input.city)
+        formData.append('fees', input.fees)
+        formData.append('image', uploadimg)
+ const response=await axios.post(api,formData)
+ console.log(response.data)
     }
- return (
+    return (
         <>
             <div className='myForm'>
                 <Form>
