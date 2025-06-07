@@ -2,11 +2,14 @@ import Button from 'react-bootstrap/Button';
 import { InputGroup,Form} from 'react-bootstrap';
 import { MdEmail } from "react-icons/md";
 import { RiLock2Fill } from "react-icons/ri";
+import { useNavigate } from 'react-router-dom';
 const Login=()=>{
+  const navigate=useNavigate()
   const handleSubmit=()=>{
+    navigate("/dashboard")
     return(
       <>
-      
+
       </>
     )
   }
