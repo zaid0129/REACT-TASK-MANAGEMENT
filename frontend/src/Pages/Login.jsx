@@ -1,27 +1,48 @@
 import Button from 'react-bootstrap/Button';
-import Form from 'react-bootstrap/Form';
-
+import { InputGroup,Form} from 'react-bootstrap';
+import { MdEmail } from "react-icons/md";
+import { RiLock2Fill } from "react-icons/ri";
 const Login=()=>{
+  const handleSubmit=()=>{
+    return(
+      <>
+      
+      </>
+    )
+  }
     return(
         <>
         <div className='formCover'>
-        <Form>
-      <Form.Group className="mb-3" controlId="formBasicEmail">
-        <Form.Label>Email address</Form.Label>
-        <Form.Control type="email" placeholder="Enter email" />
-        <Form.Text className="text-muted">
+        <Form className='myForm'>
+      <InputGroup className="mb-3">
+  <InputGroup.Text className='inptxt'>
+    <MdEmail className='env'/>
+  </InputGroup.Text>
+  <Form.Control
+    type="email"
+    placeholder="Enter email"
+    className="email"
+  />
+</InputGroup>
+        <Form.Text className="txt">
           We'll never share your email with anyone else.
         </Form.Text>
-      </Form.Group>
-
-      <Form.Group className="mb-3" controlId="formBasicPassword">
-        <Form.Label>Password</Form.Label>
-        <Form.Control type="password" placeholder="Password" />
-      </Form.Group>
+     
+      <InputGroup>
+  <InputGroup.Text className='inptxt2'>
+    <RiLock2Fill className='env'/>
+  </InputGroup.Text>
+  <Form.Control
+    type="password"
+    placeholder="Enter Password"
+    className="psw"
+  />
+</InputGroup>
+      
       <Form.Group className="mb-3" controlId="formBasicCheckbox">
-        <Form.Check type="checkbox" label="Check me out" />
+        <Form.Check type="checkbox" label="Check me out" className='text-white chk'/>
       </Form.Group>
-      <Button variant="primary" type="submit">
+      <Button className='login' type="submit" onClick={handleSubmit}>
         Submit
       </Button>
     </Form>

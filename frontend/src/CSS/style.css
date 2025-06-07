@@ -1,29 +1,78 @@
-body{
-    background-color: #001F3F !important;
+body {
+  background-color: #001f3f !important;
 }
-.header{
-    display:flex;
-    padding: 15px 50px 0px 20px;
-    justify-content: space-between;
-    height: 70px !important;
-    background-color: #7ED7C1 !important;
-    border-bottom-left-radius:20px ;
-    border-bottom-right-radius:20px ;
+.header {
+  display: flex;
+  padding: 15px 50px 0px 20px;
+  justify-content: space-between;
+  height: 70px !important;
+  background-color: #7ed7c1 !important;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
 }
-.header h3{
-    text-align: center;
-    
-    color: #001F3F !important;
+.header h3 {
+  text-align: center;
+
+  color: #001f3f !important;
 }
-#usrIcn{
+#usrIcn {
   width: 30px;
   height: 30px;
-
 }
-.formCover{
+.formCover {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.myForm {
+  border: 2px solid white;
+  border-radius: 25px;
+  width: 400px;
+  padding: 34px 40px;
+  box-shadow: 0 0 20px rgba(158, 198, 243, 0.7);
+  margin-top: 50px;
+}
+.myForm input {
+  background: transparent !important;
+  color: white !important;
+}
+.myForm input::placeholder{
+  color: white !important;
+}
+.chk input[type="checkbox"]:checked{
+   color: white !important;
+   border-color: white !important;
+}
+.chk label{
+    color: white;
+}
+.txt{
+    color: white !important;
+  
+}
+.psw{
+    margin:40px 0px !important;
+}
+.email{
+    margin-top: 25px !important;
+}
+.inptxt{
+  margin-top: 25px !important;
+    height: 42px !important;
+    padding: 0px 15px !important;
+}
+.inptxt2{
+    margin-top: 40px !important;
+    height: 37px !important;
+    padding: 0px 15px !important;
+}
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
- 
+.env{
+    font-size: 20px;
+}
+.login{
+    width: 312px;
+     background-color: #7ed7c1 !important;
+   color: #001f3f !important;
+   font-weight: 700 !important;
 }
