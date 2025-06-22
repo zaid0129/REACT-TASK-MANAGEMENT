@@ -11,77 +11,97 @@ const Dashboard = () => {
 const navDashStyle = {
   background: "#e0faf7",
   color: "#007d6d",
-  padding: "20px",
-  boxShadow: "inset 2px 2px 6px #c1ebe5, inset -2px -2px 6px #ffffff"
+  padding: "16px 24px",
+  fontFamily: "'Segoe UI', sans-serif",
+  boxShadow: "0 2px 8px rgba(0,0,0,0.05)",
+  borderBottom: "2px solid #b3e5dc"
 };
 
 const arrngStyle = {
   display: "flex",
   justifyContent: "space-between",
-  alignItems: "center"
+  alignItems: "center",
+  fontFamily: "'Segoe UI', sans-serif"
 };
 
 const logoutBtnStyle = {
   background: "#00c9a7",
   color: "#ffffff",
-  border: "1px solid #00b3a1",
-  padding: "10px 20px",
-  borderRadius: "12px",
-  boxShadow: "0 4px 10px rgba(0,180,160,0.2), 0 2px 0 rgba(0,150,130,0.4)",
+  border: "none",
+  padding: "10px 24px",
+  borderRadius: "8px",
+  fontFamily: "'Segoe UI', sans-serif",
+  fontWeight: "bold",
+  boxShadow: "0 4px 8px rgba(0, 201, 167, 0.3)",
   cursor: "pointer",
-  fontWeight: "bold"
+  transition: "all 0.3s ease"
+};
+
+logoutBtnStyle[':hover'] = {
+  background: "#00b3a1"
 };
 
 const sectionStyle = {
   display: "flex",
-  height: "calc(100vh - 80px)",
+  height: "calc(100vh - 70px)",
   background: "#f2fdfc",
-  color: "#007d6d"
+  color: "#007d6d",
+  fontFamily: "'Segoe UI', sans-serif"
 };
 
 const leftStyle = {
-  width: "250px",
+  width: "240px",
   background: "#dff6f3",
-  padding: "20px",
-  boxShadow: "inset 4px 4px 8px #c1ebe5, inset -4px -4px 8px #ffffff"
+  padding: "24px",
+  boxShadow: "inset 3px 3px 6px #c1ebe5, inset -3px -3px 6px #ffffff",
+  fontFamily: "'Segoe UI', sans-serif"
 };
 
 const rightStyle = {
   flex: 1,
-  padding: "20px",
+  padding: "24px",
   background: "#ffffff",
-  overflowY: "auto"
+  overflowY: "auto",
+  fontFamily: "'Segoe UI', sans-serif"
 };
 
 const ulStyle = {
   listStyle: "none",
-  padding: 0
+  padding: 0,
+  margin: 0
 };
 
 const liStyle = {
-  padding: "12px 20px",
-  margin: "12px 0",
+  padding: "12px 18px",
+  margin: "10px 0",
   background: "#f6fffd",
-  textDecoration: "none",
-  borderRadius: "10px",
-  boxShadow: "2px 2px 6px #d4f2ee, -2px -2px 6px #ffffff",
-  cursor: "pointer",
-  transition: "all 0.3s ease",
+  borderRadius: "8px",
+  fontFamily: "'Segoe UI', sans-serif",
+  boxShadow: "2px 2px 4px #d4f2ee, -2px -2px 4px #ffffff",
   color: "#009688",
-  fontWeight: "500"
+  fontWeight: "500",
+  transition: "all 0.3s ease",
+  cursor: "pointer"
+};
+
+liStyle[':hover'] = {
+  background: "#e0faf7",
+  transform: "translateY(-1px)"
 };
 
 const linkStyle = {
   textDecoration: "none",
   color: "#007d6d",
-  display: "block"
+  display: "block",
+  fontFamily: "'Segoe UI', sans-serif"
 };
+
 
   return (
     <>
       <div className="navDash" style={navDashStyle}>
         <div className="arrng" style={arrngStyle}>
-          <h5>Welcome : Admin , {localStorage.getItem("adminUsr")}</h5>
+          <h5>Welcome : {localStorage.getItem("adminUsr")}</h5>
           <button onClick={logout} style={logoutBtnStyle} className="neon-login-btn logout">
             Logout
           </button>

@@ -61,7 +61,6 @@
 //     )
 // }
 // export default Header
-import { RiShieldUserFill } from "react-icons/ri";
 import { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
@@ -125,7 +124,7 @@ const Header = () => {
     <>
       <div className="header">
         <h3>Task Management System</h3> 
-        <RiShieldUserFill id="usrIcn" onClick={handleShow} />
+        <button onClick={handleShow} className="user-login-btn"> User Login </button> 
 
         {/* User Login Modal */}
         <Modal show={show} onHide={handleClose} dialogClassName="glasModl">
