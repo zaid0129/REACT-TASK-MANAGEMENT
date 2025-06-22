@@ -1,78 +1,201 @@
+/* === GLOBAL === */
 body {
-  background-color: #001f3f !important;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #dff6f3;
+  color: #007d6d;
 }
+
+/* === HEADER === */
 .header {
+  background: linear-gradient(to right, #00c9a7, #00b3b3);
+  padding: 1rem 2rem;
+  color: #ffffff;
   display: flex;
-  padding: 15px 50px 0px 20px;
+  align-items: center;
   justify-content: space-between;
-  height: 70px !important;
-  background-color: #7ed7c1 !important;
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
 }
 .header h3 {
-  text-align: center;
-
-  color: #001f3f !important;
+  margin: 0;
+  color: #ffffff;
 }
+
+/* === USER ICON === */
 #usrIcn {
-  width: 30px;
-  height: 30px;
-}
-.formCover {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.myForm {
-  border: 2px solid white;
-  border-radius: 25px;
-  width: 400px;
-  padding: 34px 40px;
-  box-shadow: 0 0 20px rgba(158, 198, 243, 0.7);
-  margin-top: 50px;
-}
-.myForm input {
-  background: transparent !important;
-  color: white !important;
-}
-.myForm input::placeholder{
-  color: white !important;
-}
-.chk input[type="checkbox"]:checked{
-   color: white !important;
-   border-color: white !important;
-}
-.chk label{
-    color: white;
-}
-.txt{
-    color: white !important;
-  
-}
-.psw{
-    margin:40px 0px !important;
-}
-.email{
-    margin-top: 25px !important;
-}
-.inptxt{
-  margin-top: 25px !important;
-    height: 42px !important;
-    padding: 0px 15px !important;
-}
-.inptxt2{
-    margin-top: 40px !important;
-    height: 37px !important;
-    padding: 0px 15px !important;
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
 }
 
-.env{
-    font-size: 20px;
+/* === FORM CONTAINER === */
+.formCover {
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 175, 145, 0.15);
+  max-width: 400px;
+  margin: 3rem auto;
 }
-.login{
-    width: 312px;
-     background-color: #7ed7c1 !important;
-   color: #001f3f !important;
-   font-weight: 700 !important;
+
+/* === FORM === */
+.myForm {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background-color: #ffffff;
+  border: 1px solid #b2e2dc;
+  padding: 1.5rem;
+  border-radius: 12px;
+}
+
+.myForm input,
+.form-control,
+.select.form-select {
+  background-color: #f6fffd !important;
+  border: 1px solid #c1ebe5;
+  padding: 10px;
+  border-radius: 6px;
+  color: #009688;
+}
+
+.myForm input::placeholder,
+.form-label {
+  color: #a0cfc9;
+  font-size: 0.95rem;
+}
+
+/* === LOGIN BUTTON === */
+.login,
+.neon-login-btn,
+.glasModl .btn-primary {
+  background: #00c9a7;
+  color: white !important;
+  border: none;
+  border-radius: 25px;
+  padding: 10px 25px;
+  font-weight: bold;
+  box-shadow: 0 4px 10px rgba(0, 180, 160, 0.3);
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+.login:hover,
+.neon-login-btn:hover,
+.glasModl .btn-primary:hover {
+  background: #00b3a1;
+}
+
+/* === CHECKBOX === */
+.chk input[type="checkbox"]:checked {
+  border-color: #00b3a1 !important;
+  background-color: #00b3a1 !important;
+}
+.chk label {
+  color: #009688;
+}
+
+/* === MODAL === */
+.glasModl .modal-content {
+  background: #ffffff;
+  box-shadow: 0 4px 20px rgba(0, 175, 145, 0.1);
+  border-radius: 10px;
+  padding: 2rem;
+}
+.glasModl .form-control {
+  background: #f6fffd;
+  border: 1px solid #c1ebe5;
+  color: #009688;
+}
+
+/* === FORM FOCUS === */
+.neon-input.form-control:focus,
+.neumorphic-select.form-select:focus {
+  border-color: #00b3a1 !important;
+  box-shadow: 0 0 8px rgba(0, 175, 145, 0.3);
+  outline: none;
+}
+
+/* === SIDEBAR === */
+.navDash,
+#left {
+  background-color: #e0faf7;
+  color: #009688;
+  padding: 1rem;
+}
+#left ul {
+  list-style: none;
+  padding: 0;
+}
+#left ul li {
+  padding: 10px;
+  border-bottom: 1px solid #b2e2dc;
+  color: #007d6d;
+  transition: background 0.3s;
+}
+#left ul li:hover {
+  background-color: #00c9a7;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+/* === ICON STYLING === */
+.icnImg .icn img,
+.icn img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  margin: 0 8px;
+  vertical-align: middle;
+}
+
+/* === CARDS === */
+.first,
+.sec,
+.third {
+  background: linear-gradient(145deg, #e0faf7, #c8f4ef);
+  color: #007d6d;
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 175, 145, 0.08);
+  margin: 1rem 0;
+}
+
+/* === MODAL FOOTER === */
+.modal-footer {
+  background-color: #f6fffd;
+  border-top: 1px solid #c1ebe5;
+  padding-top: 1rem;
+}
+
+/* === UTILITY BUTTONS === */
+.reassignBtn,
+.subTaskBtn,
+.logout {
+  background: #00c9a7;
+  color: white;
+  border-radius: 20px;
+  border: none;
+  padding: 6px 12px;
+  transition: background 0.3s ease;
+}
+.reassignBtn:hover,
+.subTaskBtn:hover,
+.logout:hover {
+  background: #00b3a1;
+}
+
+.myLink{
+  text-decoration: none;
+  color: #009688;
+}
+
+/* === RESPONSIVE === */
+@media screen and (max-width: 768px) {
+  .formCover {
+    width: 90%;
+  }
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
